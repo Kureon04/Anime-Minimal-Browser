@@ -95,6 +95,13 @@ a {
     height: 100px;
 }
 
+@media screen and (max-height: 600px) {
+    .container {
+        top: 15vh;
+    }
+}
+
+
 .container .search{
     position: absolute;
     margin: auto;
