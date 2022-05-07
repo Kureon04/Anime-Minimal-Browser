@@ -72,35 +72,39 @@ a {
     margin: 6px 0;
 }
 
+/* 
+Author: Marcello XD 
+content: created .centered, removed useless code
+*/
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .title {
     filter: opacity(60%);
-    position: absolute;
+    position: relative;
     text-align: center;
-    top: 35vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 4vh;
+    font-size: 70px;
+    line-height: 70px;
 }
 
 .container{
     filter: opacity(60%);
-    margin: auto;
-    position: absolute;
-    top: 3vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
     width: 300px;
     height: 100px;
 }
-
+/* Stepbro i'm stuck
 @media screen and (max-height: 900px) {
     .container {
         top: 15vh;
     }
 }
-
+*/
+/* End of Author: Marcello XD */
 
 .container .search{
     position: absolute;
