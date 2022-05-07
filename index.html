@@ -1,102 +1,113 @@
 <html>
-    <head>
-        <title>Anime Web</title>
-        <link rel="stylesheet" href="./style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <!DOCTYPE html>
-    </head>
-    <body>
-        <!-- NavBar -->
-        <div id="myNav" class="overlay">
-            <div class="overlay-content">
-                <a href="https://www.youtube.com" onclick="closeNav()">Youtube</a>
-                <a href="https://www.netflix.com/it/" onclick="closeNav()">Netflix</a>
-                <a href="https://drive.google.com/drive/u/0/my-drive" onclick="closeNav()">Drive</a>
-                <a href="https://mail.google.com/mail/u/0/#inbox" onclick="closeNav()">Gmail</a>
-                <a href="javascript:void(0)" onclick="closeNav(), background()">Wallpaper</a>
-                <a href="javascript:void(0)" class="overlay-close" onclick="closeNav()">CLOSE</a>
-            </div>
-        </div>
 
-        <!-- Bottone Menu -->
-        <div style="position: fixed; width: 100%;top: 0;">
-            <span onclick="openNav()">
-                <p>
-                    <div class="menu-button">
-                        <div class="menuButton"></div>
-                        <div class="menuButton"></div>
-                        <div class="menuButton"></div>
-                    </div>
-                </p>
-            </span>
+<head>
+    <title>Anime Web</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!DOCTYPE html>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="https://www.youtube.com" onclick="closeNav()">Youtube</a>
+            <a href="https://www.netflix.com/it/" onclick="closeNav()">Netflix</a>
+            <a href="https://drive.google.com/drive/u/0/my-drive" onclick="closeNav()">Drive</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox" onclick="closeNav()">Gmail</a>
+            <a href="javascript:void(0)" onclick="closeNav(), background()">Wallpaper</a>
+            <a href="javascript:void(0)" class="overlay-close" onclick="closeNav()">CLOSE</a>
         </div>
+    </div>
+
+    <!-- Bottone Menu -->
+    <div style="position: fixed; width: 100%;top: 0;">
+        <span onclick="openNav()">
+            <p>
+            <div class="menu-button">
+                <div class="menuButton"></div>
+                <div class="menuButton"></div>
+                <div class="menuButton"></div>
+            </div>
+            </p>
+        </span>
+    </div>
+
+    <!-- 
+    Author: Marcello XD
+    content: added .centered and moved in it .title and .container 
+    -->
+    <div class="centered">
         <p class="title">
             Google
         </p>
-
-
+    
+    
         <div class="container animation" id="form">
             <form role="search" id="form">
-              <input type="search" placeholder="Search..." id="query" name="q" autocomplete="off">
-              <div class="search"></div>
-              <button class="search-bar" style="filter: opacity(0%);">
-                <svg viewBox="0 0 1 1">
-                  <path class="path1"
-                    d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
-                  </path>
-                </svg>
-              </button>
+                <input type="search" placeholder="Search..." id="query" name="q" autocomplete="off">
+                <div class="search"></div>
+                <button class="search-bar" style="filter: opacity(0%);">
+                    <svg viewBox="0 0 1 1">
+                        <path class="path1"
+                            d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+                        </path>
+                    </svg>
+                </button>
             </form>
-          </div>
+        </div>
+    </div>
 
-          <p class="copyright">Copyright 2022 @Lello</p>
 
-        <script>
-            /* Apre di aprire la navBar */
-            function openNav() {
-                document.getElementById("myNav").style.width = "100%";
+    <p class="copyright">Copyright 2022 @Lello</p>
+
+    <script>
+        /* Apre di aprire la navBar */
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        /* Chiude la navBar */
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        /* Cambia background */
+        var arrImg = new Array(
+            'img/1.jpg',
+            'img/2.jpg',
+            'img/3.jpg',
+        );
+
+        var i = 0;
+
+        document.body.style.backgroundImage = "url(" + arrImg[i] + ")";
+
+        function background() {
+            if (i < arrImg.length - 1) {
+                i++;
+            } else {
+                i = 0;
             }
-
-            /* Chiude la navBar */
-            function closeNav() {
-                document.getElementById("myNav").style.width = "0%";
-            }
-
-            /* Cambia background */
-            var arrImg = new Array(
-                'img/1.jpg',
-                'img/2.jpg',
-                'img/3.jpg',
-            );
-
-            var i = 0;
-
             document.body.style.backgroundImage = "url(" + arrImg[i] + ")";
+        }
 
-            function background() {
-                if (i < arrImg.length - 1) {
-                    i++;
-                } else {
-                    i = 0;
-                }
-                document.body.style.backgroundImage = "url(" + arrImg[i] + ")";
-            }
+        /* Cercare nel Web */
+        const f = document.getElementById('form');
+        const q = document.getElementById('query');
+        const google = 'https://www.google.com/search?q=+';
 
-            /* Cercare nel Web */
-            const f = document.getElementById('form');
-            const q = document.getElementById('query');
-            const google = 'https://www.google.com/search?q=+';
-
-            function submitted(event) {
+        function submitted(event) {
             event.preventDefault();
             const url = google + q.value;
             const win = window.open(url, '_blank');
             win.focus();
-            }
+        }
 
-            f.addEventListener('submit', submitted);
+        f.addEventListener('submit', submitted);
 
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
