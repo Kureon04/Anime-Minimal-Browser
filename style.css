@@ -96,6 +96,7 @@ content: created .centered, removed useless code
     position: relative;
     width: 300px;
     height: 100px;
+    margin-top: 10px;
 }
 /* Stepbro i'm stuck
 @media screen and (max-height: 900px) {
