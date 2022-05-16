@@ -89,6 +89,7 @@ content: created .centered, removed useless code
     text-align: center;
     font-size: 70px;
     line-height: 70px;
+    text-shadow: 3px 3px 1px #000000;
 }
 
 .container{
@@ -96,7 +97,7 @@ content: created .centered, removed useless code
     position: relative;
     width: 300px;
     height: 100px;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 /* Stepbro i'm stuck
 @media screen and (max-height: 900px) {
