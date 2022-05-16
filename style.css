@@ -70,6 +70,7 @@ a {
     /* background-color: rgb(29, 29, 29);*/
     background-color: white;
     margin: 6px 0;
+    box-shadow: 3px 3px 2px black;
 }
 
 /* 
